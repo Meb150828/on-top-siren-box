@@ -2,6 +2,7 @@
 
 Hello
 
+[^bignote]
 [^bignote]:
     This application is licensed under CC BY-NC 4.0.
 
