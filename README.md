@@ -1,5 +1,24 @@
 # On Top Siren Box
 
+On Top Siren Box is a desktop app that makes emergency service roleplay a little better. It's a realistic police siren box that sits on-top of your game window, and can activate siren or light functions in-game.
+
+This app was build for this game: [ER:LC](https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County)
+
+<img width="1253" height="712" alt="image" src="https://github.com/user-attachments/assets/fd77905d-298a-49ff-8fe2-eda0e063642f" />
+<img width="884" height="478" alt="image" src="https://github.com/user-attachments/assets/7e8ab3c2-7c6f-4543-bb64-3642c690ac6d" />
+
+# How it works
+
+The app works by simulating a key press to activate in-game functions
+
+# How to download
+
+You can get the app under releases: [Releases](https://github.com/Meb150828/on-top-siren-box/releases)
+
+# How to install
+
+More information coming soon
+
 License[^license]
 
 [^license]:
