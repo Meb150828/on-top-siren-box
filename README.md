@@ -30,6 +30,12 @@ You can get the app under releases: [Releases](https://github.com/Meb150828/on-t
 
 Install information coming soon
 
+# Support
+
+Donations are always optional but are very much appreciated. Donations help me make amazing apps in the future or continue to support existing ones!
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H31U9V7J)
+
 License[^license]
 
 [^license]:
