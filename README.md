@@ -11,13 +11,24 @@ This app was build for this game: [ER:LC](https://www.roblox.com/games/253472441
 
 The app works by simulating a key press to activate in-game functions
 
+**Current key map:**
+- Main Dial: `C`
+- Power Switch: `X`
+- Manual: `V`
+- Air Horn: `H`
+- Traffic Buttons: `Z`
+
+**Custom keybind settings will be made in the future!**
+
 # How to download
 
 You can get the app under releases: [Releases](https://github.com/Meb150828/on-top-siren-box/releases)
 
 # How to install
 
-More information coming soon
+**PLEASE NOTE: This app is not signed and will prompt the "Windows Defender Smart Screen"**
+
+Install information coming soon
 
 License[^license]
 
