@@ -1,0 +1,124 @@
+/* UNITY BUILD STYLE */
+/* width: 95%; height: 95%; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); */
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    min-height: 100%;
+    margin: 0;
+    background-color: #121315;
+}
+
+.drag-region {
+    -webkit-app-region: drag;
+    width: calc(100% - 110px);
+    height: 25px;
+}
+
+iframe {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.window-controls {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid hsl(220, 8%, 30%);
+    background-color: hsl(220, 8%, 15%);
+
+    transition: transform 250ms ease, border 250ms ease, background-color 250ms ease;
+}
+
+#close-button {
+    border: 2px solid hsl(0, 30%, 30%);
+    transition: transform 250ms ease, border 250ms ease, background-color 250ms ease;
+}
+
+#close-button:hover {
+    border: 2px solid hsl(0, 50%, 60%);
+}
+
+#minimize-button {
+    border: 2px solid hsl(200, 30%, 30%);
+    transition: transform 250ms ease, border 250ms ease, background-color 250ms ease;
+}
+
+#minimize-button:hover {
+    border: 2px solid hsl(200, 50%, 60%);
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+    border: 2px solid hsl(220, 8%, 60%);
+    background-color: hsl(220, 8%, 5%);
+}
+
+button svg {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    stroke: hsl(220, 8%, 60%);
+}
+
+.screen-prompt-container {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(12px);
+    background-color: hsl(220, 8%, 20%, 0%);
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.screen-prompt {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    background-color: hsl(220, 8%, 4%);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.screen-prompt h2 {
+    margin: 0;
+}
+
+.screen-prompt button {
+    aspect-ratio: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: fit-content;
+    height: 50px;
+    border-radius: 12px;
+    color: #eee;
+    font-size: medium;
+    font-weight: 700;
+}

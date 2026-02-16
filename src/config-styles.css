@@ -1,0 +1,34 @@
+body {
+    min-height: 100%;
+    margin: 0;
+    background-color: #121315;
+    color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    padding: 20px;
+    margin: 0;
+}
+
+hr {
+    border-color: #555555;
+}
+
+.container {
+    padding: 20px;
+    background-color: hsl(220, 8%, 4%);
+    width: calc(100% - 80px);
+    margin: auto;
+    border-radius: 20px;
+    border: 2px solid #555555;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 40px);
+    padding: 20px;
+    font-size: x-small;
+    color: #555555;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>On Top Siren Box</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="drag-region"></div>
+    <iframe src="Unity/index.html" frameborder="0"></iframe>
+    <div class="window-controls">
+        <button id="open-config">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+        <button id="minimize-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minimize2-icon lucide-minimize-2"><path d="m14 10 7-7"/><path d="M20 10h-6V4"/><path d="m3 21 7-7"/><path d="M4 14h6v6"/></svg>
+        </button>
+        <button id="close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+    </div>
+    <div class="screen-prompt-container" id="regain-focus-prompt">
+        <div class="screen-prompt">
+            <div>
+                <h2>Please Re-focus the App</h2>
+                <p>This app needs to be re-focused to work properly</p>
+            </div>
+            <button id="focus-button">Re-focus App</button>
+        </div>
+    </div>
+    <script>
+        window.onUnityEvent = (msg) => {
+            console.log(msg)
+            window.electronBridge.sendFromUnity(msg);
+        }
+        const configButton = document.getElementById("open-config")
+        const minimizeButton = document.getElementById("minimize-button")
+        const closeButton = document.getElementById("close-button")
+
+        const focusPrompt = document.getElementById("regain-focus-prompt")
+        const focusButton = document.getElementById("focus-button")
+
+        configButton.addEventListener("click", () => {
+            window.electronBridge.openConfig()
+        })
+        minimizeButton.addEventListener("click", () => {
+            window.electronBridge.windowControl("minimize")
+            focusPrompt.style.display = "flex"
+        })
+        closeButton.addEventListener("click", () => {
+            window.electronBridge.windowControl("close")
+        })
+        focusButton.addEventListener("click", () => {
+            window.electronBridge.windowControl("regainFocus")
+            focusPrompt.style.display = "none"
+        })
+    </script>
+    <script src="renderer.js"></script>
+</body>
+</html>
