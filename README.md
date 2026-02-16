@@ -57,6 +57,8 @@ Learn more about ElectronJS [here](https://www.electronjs.org/docs).
 
 Now copy the files from [src](https://github.com/Meb150828/on-top-siren-box/tree/main/src) and insert them into your root project folder.
 
+The Unity files will not be uploaded here. Instead, you will have to download the app from [releases](https://github.com/Meb150828/on-top-siren-box/releases) and extract the `/Unity` folder and place it in the root folder of the app.
+
 If you did everything correctly you should be able to run the app using:
 ```bash
 npm run dev
