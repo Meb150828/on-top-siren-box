@@ -59,11 +59,6 @@ Now copy the files from [src](https://github.com/Meb150828/on-top-siren-box/tree
 
 The Unity files will not be uploaded here. Instead, you will have to download the app from [releases](https://github.com/Meb150828/on-top-siren-box/releases) and extract the `/Unity` folder and place it in the root folder of the app.
 
-If you did everything correctly you should be able to run the app using:
-```bash
-npm run dev
-```
-
 Please let me know if there are any issues with this guide, and i'll try to fix it!
 
 # Support
