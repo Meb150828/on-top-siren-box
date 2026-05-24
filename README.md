@@ -61,20 +61,9 @@ The Unity files will not be uploaded here. Instead, you will have to download th
 
 Please let me know if there are any issues with this guide, and i'll try to fix it!
 
-# Support
-
-Donations are always optional but are very much appreciated. Donations help me make amazing apps in the future or continue to support existing ones!
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H31U9V7J)
-
 License[^license]
 
 [^license]:
-    This application is licensed under CC BY-NC 4.0.
+    The application and Unity files are licensed under CC BY-NC 4.0.
 
-    You may share and modify this application for non-commercial purposes only.
-    Attribution must be given to the original author: Meb150828.
-
-    Commercial distribution, resale, or inclusion in paid products is prohibited.
-
-    https://creativecommons.org/licenses/by-nc/4.0/
+    https://github.com/Meb150828/on-top-siren-box?tab=License-1-ov-file
