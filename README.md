@@ -6,7 +6,7 @@ On Top Siren Box is a desktop app that makes emergency service roleplay a little
 > This app was built for the game [ER:LC](https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County)
 
 <img width="626" height="356" alt="image" src="https://github.com/user-attachments/assets/fd77905d-298a-49ff-8fe2-eda0e063642f" />
-<img width="442" height="374" alt="image" src="https://github.com/user-attachments/assets/7e8ab3c2-7c6f-4543-bb64-3642c690ac6d" />
+<img width="690" height="374" alt="image" src="https://github.com/user-attachments/assets/7e8ab3c2-7c6f-4543-bb64-3642c690ac6d" />
 
 # How it works
 
@@ -23,7 +23,7 @@ The app works by simulating a key press to activate in-game functions
 
 # How to download
 
-You can get the app under releases: [Releases](https://github.com/Meb150828/on-top-siren-box/releases)
+You can get the app under releases: [Releases](https://github.com/Meb150828/on-top-siren-box/releases/latest)
 
 # How to install
 
@@ -51,9 +51,7 @@ The Unity files will not be uploaded here. Instead, you will have to download th
 
 # Issues/Feature requests
 
-If you find any issues with the app please submit an issue [here](https://github.com/Meb150828/on-top-siren-box/issues) 
-
-For feature requests please create a discussion [here](https://github.com/Meb150828/on-top-siren-box/discussions/categories/feature-requests)
+If you find any issues with the app or want to request a feature, please submit an issue [here](https://github.com/Meb150828/on-top-siren-box/issues).
 
 License[^license]
 
