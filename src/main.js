@@ -1,5 +1,5 @@
-const { app, BrowserWindow, ipcMain } = require('electron/main')
-const path = require('node:path')
+const { app, BrowserWindow, ipcMain } = require('electron/main');
+const path = require('node:path');
 const { keyboard, Key } = require('@nut-tree-fork/nut-js');
 
 let mainWindow;
@@ -12,7 +12,7 @@ const keyMap = {
     'sirenSwitch': Key.C,
     'lightingSwitch': Key.X,
     'trafficButton': Key.Z,
-}
+};
 
 function FocusWindow(win) {
     win.setAlwaysOnTop(true)
@@ -22,7 +22,7 @@ function FocusWindow(win) {
     win.focus({ steal: true })
     win.setFocusable(false)
     win.setSkipTaskbar(false)
-}
+};
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -37,7 +37,7 @@ function createWindow() {
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
         }
-    })
+    });
     win.setAspectRatio(16 / 9)
     win.setAlwaysOnTop(true)
     win.loadFile('index.html')
@@ -46,10 +46,10 @@ function createWindow() {
 
     win.on('restore', () => {
         FocusWindow(win)
-    })
+    });
 
     mainWindow = win
-}
+};
 
 var IsConfigOpen = false
 
@@ -70,7 +70,7 @@ function OpenConfig() {
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
         }
-    })
+    });
     win.setAspectRatio(5 / 8)
     win.loadFile('config-window.html')
     win.setSkipTaskbar(false)
@@ -80,8 +80,8 @@ function OpenConfig() {
     win.addListener('closed', () => {
         IsConfigOpen = false
         mainWindow.webContents.send('focus-unity')
-    })
-}
+    });
+};
 
 keyboard.config.autoDelayMs = 0;
 keyboard.config.delay = 0;
@@ -94,8 +94,11 @@ async function HoldKey(msg) {
             return;
         }
         await keyboard.pressKey(getKey)
+        if (msg != 'manualDown' && msg != 'hornDown') {
+            await keyboard.releaseKey(getKey)
+        }
     }
-}
+};
 
 ipcMain.on('unity-event', (event, msg) => {
     HoldKey(msg)
@@ -126,11 +129,15 @@ app.whenReady().then(() => {
         if (BrowserWindow.getAllWindows().length === 0) {
             createWindow()
         }
-    })
-})
+    });
+});
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit()
     }
-})
+});
+
+app.on('before-quit', () => {
+    mainWindow.setSkipTaskbar(true)
+});

@@ -37,29 +37,23 @@ You can create a shortcut or just double click on the .exe to run the app.
 
 # Build it Yourself
 
-If you would like to build the app yourself, follow these steps below.
+If you'd like to build the app yourself, follow these steps below.
 
-Firstly, create a new Node project.
-```bash
-npm init
-```
-Follow the instructions to create your package.json file.
+1. Clone this repo
+2. Open Windows CMD and change the directory to the `src` folder
+3. Run the command `npm run make` (Only works if npm is installed)
 
-Next you'll want to install ElectronJS and Nut Js.
-```bash
-npm i electron --save-dev
-```
-```bash
-npm i @nut-tree-fork/nut-js
-```
+To just run the program without building it, simply run `npm run start`
 
-Learn more about ElectronJS [here](https://www.electronjs.org/docs).
+Learn more about ElectronJS and npm here: [ElectronJS](https://www.electronjs.org/docs) [npm](https://www.npmjs.com/).
 
-Now copy the files from [src](https://github.com/Meb150828/on-top-siren-box/tree/main/src) and insert them into your root project folder.
+The Unity files will not be uploaded here. Instead, you will have to download the app from [releases](https://github.com/Meb150828/on-top-siren-box/releases) then extract the `/Unity/Build` folder and place it in the `/Unity` folder of the app.
 
-The Unity files will not be uploaded here. Instead, you will have to download the app from [releases](https://github.com/Meb150828/on-top-siren-box/releases) and extract the `/Unity` folder and place it in the root folder of the app.
+# Issues/Feature requests
 
-Please let me know if there are any issues with this guide, and i'll try to fix it!
+If you find any issues with the app please submit an issue [here](https://github.com/Meb150828/on-top-siren-box/issues) 
+
+For feature requests please create a discussion [here](https://github.com/Meb150828/on-top-siren-box/discussions/categories/feature-requests)
 
 License[^license]
 

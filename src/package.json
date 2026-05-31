@@ -1,8 +1,8 @@
 {
   "name": "on-top-siren-box",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "license": "CC BY-NC 4.0",
+  "license": "GPL-3.0-only",
   "author": "",
   "type": "commonjs",
   "main": "main.js",
@@ -10,20 +10,6 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
-  },
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin",
-            "win32"
-          ]
-        }
-      ]
-    }
   },
   "dependencies": {
     "@nut-tree-fork/nut-js": "^4.2.6",

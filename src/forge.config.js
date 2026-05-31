@@ -13,6 +13,7 @@ module.exports = {
                     icon: path.join(__dirname, 'icon')
                 }
             },
+            platforms: ["darwin", "win32"]
         },
     ],
 };
